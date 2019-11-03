@@ -8,6 +8,14 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+import PortalVue from 'portal-vue'
+Vue.use(PortalVue)
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
+
+Vue.use(BootstrapVue)
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -16,7 +24,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
+Vue.component('my', require('./components/my.vue'));
 const app = new Vue({
     el: '#app'
 });
